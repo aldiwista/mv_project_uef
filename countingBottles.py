@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-im_file = "bottle_crate_24.png"
+im_file = "bottle_crate_06.png"
 img = cv2.imread("images/"+im_file,cv2.IMREAD_COLOR)
 img = cv2.medianBlur(img,5)
 img2 = cv2.medianBlur(img,13)
@@ -34,7 +34,7 @@ if flip_bottles is not None:
     flip_bottles = np.uint16(np.around(flip_bottles))  
     for pt in flip_bottles[0, :]:
         a, b, r = pt[0], pt[1], pt[2]
-        cv2.circle(img, (a, b), r, (0, 255, 0), 2)
+        cv2.circle(img, (a, b), r, (255, 0, 255), 2)
         cv2.circle(img, (a, b), 1, (0, 0, 255), 3)
         num_flipped_bottles =num_flipped_bottles +1
 else: 
