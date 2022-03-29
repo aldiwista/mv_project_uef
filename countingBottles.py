@@ -1,3 +1,4 @@
+#Author : Aldi Wista FADHILAH and Atland BOKSI
 import cv2
 import numpy as np
 
